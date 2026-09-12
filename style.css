@@ -131,9 +131,9 @@
   /* ---------- Hero ---------- */
   .hero{
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(460px, 1fr) minmax(340px, 0.84fr);
     align-items:stretch;
-    min-height:clamp(620px, calc(100vh - 74px), 760px);
+    min-height:clamp(560px, calc(100vh - 74px), 700px);
   }
   .hero-content{
     background:var(--areia);
@@ -164,11 +164,79 @@
     background:var(--verde-profundo);
     min-height:420px;
     max-height:680px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:clamp(14px,2vw,30px);
+  }
+  .hero-image-link{
+    display:block;
+    width:100%;
+    height:100%;
+    min-height:360px;
+    overflow:hidden;
+    border-radius:var(--radius);
   }
   .hero-media img{
     width:100%; height:100%; object-fit:cover;
     object-position:center center;
-    transform:scale(1.01);
+    transform:scale(0.93);
+    border-radius:var(--radius);
+  }
+
+  .cesar-story {
+    background: var(--areia);
+    padding: clamp(70px, 8vw, 110px) 0;
+  }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(30px, 4vw, 56px);
+    align-items: center;
+  }
+
+  .story-media {
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 50px rgba(23,58,45,0.14);
+  }
+
+  .story-media img {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .story-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .story-copy .section-label {
+    color: var(--oliva);
+  }
+
+  .story-copy h2 {
+    color: var(--verde-profundo);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    margin: 14px 0 16px;
+  }
+
+  .story-copy p {
+    color: #4a5346;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 56ch;
+    margin-bottom: 16px;
+  }
+
+  .story-copy .btn {
+    margin-top: 14px;
   }
 
   /* ---------- Section shells ---------- */
@@ -427,8 +495,11 @@
     .mobile-nav{display:flex;}
 
     .hero{grid-template-columns:1fr;}
-    .hero-media{order:2; min-height:60vh;}
-    .hero-content{order:1;}
+    .hero-media{order:1; min-height:50vh; max-height:440px;}
+    .hero-content{order:2;}
+
+    .story-grid{grid-template-columns:1fr;}
+    .story-media img{min-height:280px;}
 
     .process-grid{grid-template-columns:1fr;}
     .process-media{order:-1;}
