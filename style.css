@@ -99,7 +99,7 @@ button {
 
 .brand-logo {
     width:auto;
-    height:76px;
+    height:clamp(48px, 8vw, 76px);
     object-fit:contain;
 }
 
@@ -1365,12 +1365,12 @@ button {
 
 
     .brand-logo {
-        height:58px;
+        height:clamp(48px, 10vw, 58px);
     }
 
 
     .footer-brand .brand-logo {
-        height:76px;
+        height:clamp(60px, 12vw, 76px);
     }
 
 
