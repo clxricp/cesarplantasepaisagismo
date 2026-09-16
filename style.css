@@ -97,6 +97,18 @@ button {
 }
 
 
+.brand-logo {
+    width:auto;
+    height:76px;
+    object-fit:contain;
+}
+
+
+.footer-brand .brand-logo {
+    height:88px;
+}
+
+
 .brand-mark {
     width:40px;
     height:40px;
@@ -113,7 +125,7 @@ button {
 
 
 .brand-text {
-    display:flex;
+    display:none;
     flex-direction:column;
     line-height:1;
 }
@@ -537,6 +549,13 @@ button {
 }
 
 
+.process-image img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
 /*
    ESTES SÃO OS ESPAÇOS DAS FOTOS.
 
@@ -856,8 +875,8 @@ button {
     right:0;
     bottom:10px;
 
-    width:31%;
-    height:230px;
+    width:40%;
+    height:280px;
 
     border:10px solid var(--green-deep);
 
@@ -1345,20 +1364,13 @@ button {
     }
 
 
-    .brand-mark {
-        width:35px;
-        height:35px;
-        font-size:22px;
+    .brand-logo {
+        height:58px;
     }
 
 
-    .brand-text strong {
-        font-size:10px;
-    }
-
-
-    .brand-text small {
-        font-size:7px;
+    .footer-brand .brand-logo {
+        height:76px;
     }
 
 

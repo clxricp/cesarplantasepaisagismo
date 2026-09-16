@@ -162,31 +162,3 @@ document.addEventListener("keydown",event =>
 // =========================
 // WHATSAPP
 // =========================
-
-const whatsappLinks = document.querySelectorAll(".whatsapp-link");
-
-
-whatsappLinks.forEach(link =>
-{
-    link.addEventListener("click",event =>
-    {
-        event.preventDefault();
-
-        if(!whatsappNumber)
-        {
-            alert("Adicione o número de WhatsApp da empresa no arquivo script.js.");
-            return;
-        }
-
-
-        const message = encodeURIComponent(
-            "Olá! Gostaria de conhecer melhor o trabalho da César Plantas & Paisagismo."
-        );
-
-
-        window.open(
-            `https://wa.me/${whatsappNumber}?text=${message}`,
-            "_blank"
-        );
-    });
-});

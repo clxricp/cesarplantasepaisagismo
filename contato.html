@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contato | César Plantas & Paisagismo</title>
+
+    <meta
+        name="description"
+        content="Entre em contato com a César Plantas & Paisagismo."
+    >
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --verde: #173A2D;
+            --verde-claro: #A9B58B;
+            --oliva: #6F7C4A;
+            --areia: #EDE7DC;
+            --off-white: #FAF8F2;
+            --marrom: #6B4E3D;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--verde);
+            color: var(--off-white);
+            font-family: "Manrope", sans-serif;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           PÁGINA
+        ========================= */
+
+        .contact-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 32px 6%;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .contact-header {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .brand-logo {
+            display: block;
+            width: auto;
+            height: 76px;
+            object-fit: contain;
+        }
+
+        .brand-name {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.65rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-subtitle {
+            margin-top: 6px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--verde-claro);
+        }
+
+        .back-top {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+
+            opacity: 0.75;
+            transition: opacity 0.25s ease;
+        }
+
+        .back-top:hover {
+            opacity: 1;
+        }
+
+        /* =========================
+           CONTEÚDO
+        ========================= */
+
+        .contact-main {
+            flex: 1;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 80px 0;
+        }
+
+        .contact-intro {
+            max-width: 650px;
+            margin-bottom: 52px;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 18px;
+
+            color: var(--verde-claro);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 1px;
+            background: var(--verde-claro);
+        }
+
+        h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(3.4rem, 7vw, 6.5rem);
+            font-weight: 500;
+            line-height: 0.9;
+            letter-spacing: -0.045em;
+        }
+
+        .intro-text {
+            max-width: 520px;
+            margin-top: 24px;
+
+            color: rgba(250, 248, 242, 0.68);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .contacts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .contact-card {
+            min-height: 275px;
+            padding: 34px;
+
+            display: flex;
+            flex-direction: column;
+
+            background: var(--off-white);
+            color: var(--verde);
+
+            border-radius: 2px;
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: var(--areia);
+        }
+
+        .card-number {
+            display: block;
+            margin-bottom: 45px;
+
+            font-size: 0.67rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--oliva);
+        }
+
+        .contact-card h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 2.6rem;
+            font-weight: 600;
+            line-height: 1;
+            letter-spacing: -0.025em;
+        }
+
+        .contact-card p {
+            max-width: 350px;
+            margin-top: 13px;
+
+            color: rgba(23, 58, 45, 0.65);
+            font-size: 0.84rem;
+            line-height: 1.6;
+        }
+
+        .whatsapp-button {
+            width: fit-content;
+            margin-top: auto;
+            padding-top: 30px;
+
+            display: flex;
+            align-items: center;
+            gap: 11px;
+
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .whatsapp-icon {
+            width: 33px;
+            height: 33px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(23, 58, 45, 0.25);
+            border-radius: 50%;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease;
+        }
+
+        .contact-card:hover .whatsapp-icon {
+            background: var(--verde);
+            color: var(--off-white);
+        }
+
+        .arrow {
+            font-size: 1.15rem;
+            transition: transform 0.25s ease;
+        }
+
+        .contact-card:hover .arrow {
+            transform: translateX(4px);
+        }
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        .contact-footer {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+
+            padding-top: 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-top: 1px solid rgba(250, 248, 242, 0.12);
+
+            color: rgba(250, 248, 242, 0.5);
+            font-size: 0.68rem;
+        }
+
+        .instagram {
+            transition: color 0.25s ease;
+        }
+
+        .instagram:hover {
+            color: var(--off-white);
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            .contact-page {
+                padding: 24px 22px;
+            }
+
+            .brand-name {
+                font-size: 1.35rem;
+            }
+
+            .brand-logo {
+                height: 58px;
+            }
+
+            .brand-subtitle {
+                font-size: 0.55rem;
+            }
+
+            .back-top span {
+                display: none;
+            }
+
+            .contact-main {
+                justify-content: flex-start;
+                padding: 90px 0 60px;
+            }
+
+            .contact-intro {
+                margin-bottom: 38px;
+            }
+
+            h1 {
+                font-size: clamp(3.4rem, 17vw, 5rem);
+                line-height: 0.88;
+            }
+
+            .intro-text {
+                margin-top: 20px;
+                font-size: 0.88rem;
+            }
+
+            .contacts {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .contact-card {
+                min-height: 230px;
+                padding: 27px;
+            }
+
+            .card-number {
+                margin-bottom: 32px;
+            }
+
+            .contact-card h2 {
+                font-size: 2.2rem;
+            }
+
+            .contact-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+
+                padding: 22px 0 4px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .contact-main {
+                padding-top: 70px;
+            }
+
+            .contact-card {
+                min-height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contact-page">
+
+        <!-- HEADER -->
+        <header class="contact-header">
+
+            <a href="index.html" class="brand">
+                <img class="brand-logo" src="images/logo-cesar-plantas-clara.png" alt="César Plantas & Paisagismo">
+            </a>
+
+            <a href="index.html" class="back-top">
+                ← <span>Voltar ao site</span>
+            </a>
+
+        </header>
+
+
+        <!-- CONTEÚDO -->
+        <main class="contact-main">
+
+            <section class="contact-intro">
+
+                <div class="eyebrow">
+                    Contato
+                </div>
+
+                <h1>
+                    Como podemos<br>
+                    te ajudar?
+                </h1>
+
+                <p class="intro-text">
+                    Escolha abaixo o contato mais adequado para o que você
+                    precisa e fale diretamente com a nossa equipe pelo WhatsApp.
+                </p>
+
+            </section>
+
+
+            <!-- CONTATOS -->
+            <!-- CONTATOS -->
+<section class="contacts">
+
+    <!-- WHATSAPP CÉSAR -->
+    <a
+        href="https://wa.me/5532998025656"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-card"
+    >
+
+        <span class="card-number">01 / CONTATO</span>
+
+        <h2>César</h2>
+
+        <p>
+            Fale diretamente com César pelo WhatsApp para informações,
+            dúvidas e orçamentos.
+        </p>
+
+        <div class="whatsapp-button">
+            <span class="whatsapp-icon">↗</span>
+
+            Conversar pelo WhatsApp
+
+            <span class="arrow">→</span>
+        </div>
+
+    </a>
+
+
+    <!-- WHATSAPP MATEUS -->
+    <a
+        href="https://wa.me/553298680809"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-card"
+    >
+
+        <span class="card-number">02 / CONTATO</span>
+
+        <h2>Mateus</h2>
+
+        <p>
+            Fale diretamente com Mateus pelo WhatsApp para informações,
+            dúvidas e orçamentos.
+        </p>
+
+        <div class="whatsapp-button">
+            <span class="whatsapp-icon">↗</span>
+
+            Conversar pelo WhatsApp
+
+            <span class="arrow">→</span>
+        </div>
+
+    </a>
+
+</section>
+
+
+        <!-- RODAPÉ -->
+        <footer class="contact-footer">
+
+            <span>
+                César Plantas & Paisagismo
+            </span>
+
+            <a
+                href="https://www.instagram.com/cesarplantas.paisagismo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="instagram"
+            >
+                @cesarplantas.paisagismo
+            </a>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
